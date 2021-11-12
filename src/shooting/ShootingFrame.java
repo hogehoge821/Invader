@@ -7,7 +7,10 @@ public class ShootingFrame extends JFrame {
 
     public ShootingFrame() {
         panel = new ShootingPanel();
+
         this.add(panel);
+
+        this.addKeyListener(new Keyboard());
         this.setTitle("Shooting");
         this.pack();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
