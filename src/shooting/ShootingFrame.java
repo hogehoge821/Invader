@@ -7,7 +7,7 @@ public class ShootingFrame extends JFrame {
         this.setTitle("Shooting");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(500,500);
-        this.setLocationByPlatform(true);//フレームの表示位置をOSに任せる
+        this.setLocationRelativeTo(null);//画面の真ん中にフレームを表示
         this.setVisible(true);
     }
 }
