@@ -28,9 +28,13 @@ public class Shooting {
             startTime = System.currentTimeMillis();
             gra.setColor(Color.WHITE);
             gra.fillRect(0,0,500,500);
+
             gra.setColor(Color.BLACK);
             gra.fillRect(100,100,100,100);
 
+            gra.setColor(Color.BLACK);
+            gra.setFont(new Font("SansSerif", Font.PLAIN, 10));
+            gra.drawString(FPS + "FPS", 0,400);
             shootingFrame.getPanel().draw();
             try {
                 Thread.sleep((1000 / fps) - (System.currentTimeMillis() - startTime));
