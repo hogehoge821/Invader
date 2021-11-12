@@ -11,7 +11,7 @@ public class Shooting {
 
         Graphics gra = shootingFrame.getPanel().getImage().createGraphics();
 
-        loop = false;
+        loop = true;
         long startTime;
         long fpsTime = 0;
         int fps = 30;
