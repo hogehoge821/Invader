@@ -12,7 +12,6 @@ public class ShootingFrame extends JFrame {
 
         this.addKeyListener(new Keyboard());
         this.setTitle("Shooting");
-        this.pack();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(500,500);
         this.setLocationRelativeTo(null);//画面の真ん中にフレームを表示
