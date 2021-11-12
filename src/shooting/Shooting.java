@@ -12,11 +12,20 @@ public class Shooting {
         Graphics gra = shootingFrame.getPanel().getImage().createGraphics();
 
         loop = false;
+        long startTime;
+        long fpsTime = 0;
         int fps = 30;
+        int FPS = 0;
+        int FPSCount = 0;
 
         while (loop) {
-            var startTime = System.currentTimeMillis();
-
+            if ((System.currentTimeMillis() - fpsTime) >= 1000) {
+                fpsTime = System.currentTimeMillis();
+                FPS = FPSCount;
+                FPSCount = 0;
+            }
+            FPSCount++;
+            startTime = System.currentTimeMillis();
             gra.setColor(Color.WHITE);
             gra.fillRect(0,0,500,500);
             gra.setColor(Color.BLACK);
@@ -28,6 +37,7 @@ public class Shooting {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println(System.currentTimeMillis() - startTime);
         }
     }
 }
