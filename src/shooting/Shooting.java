@@ -34,7 +34,7 @@ public class Shooting {
 
             gra.setColor(Color.BLACK);
             gra.setFont(new Font("SansSerif", Font.PLAIN, 10));
-            gra.drawString(FPS + "FPS", 0,400);
+            gra.drawString(FPS + "FPS", 0,470);
             shootingFrame.getPanel().draw();
             try {
                 Thread.sleep((1000 / fps) - (System.currentTimeMillis() - startTime));
